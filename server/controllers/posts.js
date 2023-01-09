@@ -1,5 +1,5 @@
-import Post from "../models/Post";
-import User from "../models/User";
+import Post from "../models/Post.js";
+import User from "../models/User.js";
 
 const createPost = async (req, res) => {
   try {
@@ -67,3 +67,5 @@ const likePost = async (req, res) => {
     res.send(404).json({ message: err.message });
   }
 };
+
+export { getFeedPosts, getUserPosts, likePost, createPost };

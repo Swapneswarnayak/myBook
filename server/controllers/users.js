@@ -1,4 +1,4 @@
-import User from "../models/User";
+import User from "../models/User.js";
 
 const getUser = async (req, res) => {
   try {
@@ -59,3 +59,9 @@ const addRemoveFriends = async (req, res) => {
     res.status(404).json({ message: err.message });
   }
 };
+
+export {
+    addRemoveFriends,
+    getUserFriends,
+    getUser
+}
