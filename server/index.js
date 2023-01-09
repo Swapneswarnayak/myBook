@@ -8,6 +8,7 @@ import helmet from "helmet";
 import morgan from "morgan";
 import path from "path";
 import { fileURLToPath } from "url";
+import router from "./routes/auth.js";
 import { register } from "./controllers/auth.js";
 
 // configurations
@@ -44,6 +45,9 @@ const upload = multer({ storage });
 //routes with file
 app.post("/auth/register", upload.single("picture"), register);
 
+//routes
+app.use("/auth", router);
+
 //mongoose setup
 
 let PORT = Number(process.env.PORT) || 6001;
@@ -55,7 +59,7 @@ mongoose
   })
   .then(() => {
     app.listen(PORT, () => {
-      console.log(`server started at: ${process.env.PORT}`);
+      console.log(`server started at: ${PORT}`);
     });
   })
   .catch((err) => {
