@@ -1,0 +1,26 @@
+#outlined-basic:focus{
+    background-color: aliceblue;
+    border-radius: 8px;
+    /* color: white; */
+    /* border-color: #FF9398; */
+    /* color: aliceblue; */
+}
+
+
+#country-select-demo:focus{
+    background-color: aliceblue;
+    /* border-radius: 8px; */
+}
+
+#signup{
+    width: 35%;
+    margin: 2% auto;
+    background-color: #FF9398;
+    padding: 1px 35px 15px 35px;
+    border-radius: 8px;
+}
+#sigup_button{
+    background-color: aliceblue;
+    color: #FF9398;
+    border: #FF9398;
+}
